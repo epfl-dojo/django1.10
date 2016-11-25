@@ -59,7 +59,7 @@ sudo vi /etc/hosts
 ## Tequila install
 
 ~~~ bash
-sudo apt install libssl-dev
+sudo apt install libssl-dev apache2-dev
 wget http://tequila.epfl.ch/download/2.0/tequila-apache-C-2.0.16.tgz
 tar -xvzf tequila-apache-C-2.0.16.tgz
 cd tequila-2.0.16/Apache/C/
@@ -96,7 +96,7 @@ sudo chown www-data: /var/tequila
 sudo a2enmod tequila
 sudo service apache2 restart
 
-sudo apache2ctl -t -D DUMP_MODULES | grep tequila
+sudo apache2ctl -M  | grep tequila
 ~~~
 
 ~~~ out
